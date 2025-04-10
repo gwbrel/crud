@@ -13,7 +13,7 @@ function EditUser() {
         axios.get(`http://localhost:9090/users/${id}`).then((res) => {
             setNome(res.data.nome);
             setEmail(res.data.email);
-            setPswd(res.data.pswd); // Adicionado para controle completo do estado
+            setPswd(res.data.pswd);
         });
     }, [id]);
 
@@ -21,11 +21,11 @@ function EditUser() {
         e.preventDefault();
         axios.put(`http://localhost:9090/users/${id}`, { nome, email, pswd })
             .then(() => navigate("/"))
-            .catch(error => console.error("Erro ao atualizar:", error)); // Melhoria de tratamento de erro
+            .catch(error => console.error("Erro ao atualizar:", error)); 
     };
 
     return (
-        <div> {/* Container para elementos irmãos */} 
+        <div> 
             <form onSubmit={handleSubmit}>
                 <input 
                     type="text" 
@@ -42,7 +42,7 @@ function EditUser() {
                 <input 
                     type="password" 
                     placeholder="Nova senha" 
-                    value={pswd} // Corrigido input não controlado [[9]]
+                    value={pswd}
                     onChange={(e) => setPswd(e.target.value)}
                 />
                 <button type="submit">Atualizar</button>
