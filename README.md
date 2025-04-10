@@ -1,5 +1,5 @@
 # Trabalho em REACT
 
-1. Instalar o NPM na pasta REACTPROJECT
+1. Dar npm install na pasta REACTPROJECT e npm install dotenv na pasta BACKEND
 2. Importar o SQL
-3. Dar NPM START na pasta REACPROJECT e Node server.js na pasta do BACKEND
+3. Dar NPM START na pasta REACPROJECT e node server.js na pasta do BACKEND
